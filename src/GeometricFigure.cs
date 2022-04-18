@@ -28,7 +28,7 @@ namespace lab1
         public GeometricFigure() { }
 
 
-        abstract public void DrawFigure(Pen pen, Graphics graphic);
+        abstract public void DrawFigure(Graphics graphic);
 
         public int getX1()
         {

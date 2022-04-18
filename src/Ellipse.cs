@@ -17,9 +17,10 @@ namespace lab1
 
         public Ellipse() {}
 
-        public override void DrawFigure(Pen pen, Graphics graphic)
+        public override void DrawFigure(Graphics graphic)
         {
-            graphic.DrawArc(pen, (this.x2 + this.x1) / 2, (this.y2 + this.y1) / 2, Math.Abs(this.x2 - this.x1) / 2, Math.Abs(this.y2 - this.y1) / 2, 0, 360);
+            Draw draw = new Draw(x1, y1, x2, y2, graphic);
+            draw.PrintFigure(new DrawEllipse());
         }
 
     }

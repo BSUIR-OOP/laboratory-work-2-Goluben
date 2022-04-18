@@ -13,18 +13,12 @@ namespace lab1
     public partial class Form1 : Form
     {
         Graphics graphic;
-        Pen pen = new Pen(Color.FromArgb(255, 0, 0, 0), 5);
         private GeometricFigure figure;
 
         public Form1()
         {
             InitializeComponent();
             graphic = CreateGraphics();
-        }
-
-        private void Form1_Paint(object sender, PaintEventArgs e)
-        {
-            pen.Width = 3;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,7 +40,7 @@ namespace lab1
             Cursor = Cursors.Default;
             this.figure.setX2(e.X);
             this.figure.setY2(e.Y);
-            this.figure.DrawFigure(pen, graphic);
+            this.figure.DrawFigure(graphic);
         }
 
     }
